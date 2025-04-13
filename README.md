@@ -45,11 +45,13 @@ A web app to help job seekers manage applications, get AI-powered resume feedbac
 
 4. Add environment variables in `.env.local`:
 
+
    ```env
 SESSION_SECRET=123
 JWT_SECRET=12345678
 NEXT_PUBLIC_BASE_URL=http://localhost:3000
 DATABASE_URL="postgresql://johndoe:randompassword@localhost:5432/mydb?schema=public"
+  
    ```
 
 5. Start the development server:
