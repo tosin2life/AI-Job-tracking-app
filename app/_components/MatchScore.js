@@ -1,8 +1,6 @@
 export default function MatchScore({ score }) {
-  // Clamp score between 0 and 100
   const safeScore = Math.max(0, Math.min(100, score));
 
-  // Determine color
   let color = "bg-red-500";
   if (safeScore >= 80) color = "bg-green-500";
   else if (safeScore >= 50) color = "bg-yellow-500";
