@@ -46,7 +46,7 @@ A web app to help job seekers manage applications, get AI-powered resume feedbac
 4. Add environment variables in `.env.local`:
 
    ```env
-   SESSION_SECRET=your-session-secret
+   SESSION_SECRET=123
    JWT_SECRET=your-jwt-secret
    NEXT_PUBLIC_BASE_URL=http://localhost:3000
    DATABASE_URL="file:./dev.db"
