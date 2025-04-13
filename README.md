@@ -1,36 +1,72 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# AI Job Application Tracker
 
-## Getting Started
+A web app to help job seekers manage applications, get AI-powered resume feedback, and track progress.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Job Tracking**: Add, update, and delete job applications.
+- **AI Resume Feedback**: Get suggestions to improve your resume.
+- **Job Recommendations**: View jobs with match scores.
+- **Authentication**: Secure user registration and login.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Tech Stack
 
-## Learn More
+- **Frontend**: React, Tailwind CSS
+- **Backend**: Next.js, Prisma
+- **Database**: SQLite (development), PostgreSQL/MySQL (production)
+- **Authentication**: Password hashing with `bcrypt`
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Setup
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. Clone the repository:
 
-## Deploy on Vercel
+   ```bash
+   git clone https://github.com/your-username/ai-job-app-tracker.git
+   cd ai-job-app-tracker
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+2. Install dependencies:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+   ```bash
+   npm install
+   ```
+
+3. Set up the database:
+
+   ```bash
+   npx prisma migrate dev --name init
+   ```
+
+4. Add environment variables in `.env.local`:
+
+   ```env
+   SESSION_SECRET=your-session-secret
+   JWT_SECRET=your-jwt-secret
+   NEXT_PUBLIC_BASE_URL=http://localhost:3000
+   DATABASE_URL="file:./dev.db"
+   ```
+
+5. Start the development server:
+   ```bash
+   npm run dev
+   ```
+
+---
+
+## Usage
+
+- **Resume Feedback**: Paste your resume and get suggestions.
+- **Job Tracking**: Add and manage job applications.
+- **Job Recommendations**: View and apply for recommended jobs.
+
+---
+
+## License
+
+This project is licensed under the MIT License.
